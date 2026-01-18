@@ -1,0 +1,138 @@
+---
+title: Quickstart Guide
+description: Set up your Kreaph account and create your first documentation project in under 5 minutes.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Internet connection
+
+<Callout kind="info">
+  No credit card or downloads required. Get started instantly.
+</Callout>
+
+## Create Your Account
+
+Sign up for Kreaph in seconds. Choose your preferred method.
+
+<Tabs>
+  <Tab title="Email" icon="mail">
+    Visit [https://app.kreaph.com/signup](https://app.kreaph.com/signup) and enter your email and password.
+
+    <Steps>
+      <Step title="Enter Details" icon="user-plus">
+        Provide your email, create a strong password, and agree to terms.
+      </Step>
+      <Step title="Verify Email">
+        Check your inbox for the verification link and click it.
+      </Step>
+      <Step title="Log In">
+        Return to [https://app.kreaph.com/login](https://app.kreaph.com/login) and sign in.
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Google" icon="apple">
+    Click "Continue with Google" on the signup page and authorize access.
+
+    <Callout kind="tip">
+      This skips email verification.
+    </Callout>
+  </Tab>
+</Tabs>
+
+## Create Your First Documentation Space
+
+Once logged in, land on the dashboard.
+
+<Steps>
+  <Step title="New Space" icon="plus">
+    Click the <kbd>New Space</kbd> button in the top-right corner.
+  </Step>
+  <Step title="Configure Space">
+    Enter a name like "My Project Docs", select "Documentation" template, and choose brand color `#3B82F6`.
+  </Step>
+  <Step title="Publish">
+    Hit <kbd>Create Space</kbd>. Your space is live at a URL like `https://yourspace.kreaph.com`.
+  </Step>
+</Steps>
+
+## Add Your First Page and Content
+
+Navigate to your new space.
+
+<Steps>
+  <Step title="Create Page" icon="file-plus">
+    Click <kbd>New Page</kbd> and name it "Introduction".
+  </Step>
+  <Step title="Edit Content">
+    Use the visual editor to add headings, text, and components. Try inserting a code block.
+  </Step>
+  <Step title="Preview and Publish">
+    Click <kbd>Preview</kbd> to see changes, then <kbd>Publish</kbd>.
+  </Step>
+</Steps>
+
+Here's an example code block you can add to your page:
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // kreaph client example
+  const kreaph = new KreaphClient('YOUR_API_KEY');
+  const space = await kreaph.spaces.create({ name: 'My Docs' });
+  console.log(`Created space: ${space.url}`);
+  ```
+
+  ```python
+  # kreaph python example
+  from kreaph import KreaphClient
+  client = KreaphClient('YOUR_API_KEY')
+  space = client.spaces.create(name='My Docs')
+  print(f"Created space: {space.url}")
+  ```
+</CodeGroup>
+
+## Basic Navigation and Editor Features
+
+Use the sidebar to manage pages. Drag to reorder.
+
+<Columns cols={2}>
+  <Card title="Editor Shortcuts" icon="keyboard">
+    - <kbd>Ctrl</kbd>+<kbd>B</kbd>: Bold
+    - <kbd>Ctrl</kbd>+<kbd>K</kbd>: Link
+    - <kbd>/</kbd>: Insert component
+  </Card>
+  <Card title="Navigation" icon="menu" href="#editor-shortcuts">
+    - Sidebar: Pages and settings
+    - Search: Find content fast
+    - History: Revert changes
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+  - **Can't log in?** Check spam folder for verification.
+  - **Page not publishing?** Ensure you're online and try refreshing.
+  - **Editor slow?** Clear browser cache.
+</Expandable>
+
+## Next Steps
+
+<Callout kind="success">
+  Congratulations! You've created your first kreaph documentation space. Explore more features like custom domains and analytics.
+</Callout>
+
+<Columns cols={3}>
+  <Card title="Customize Theme" icon="palette" href="/configuration">
+    Adjust colors and layouts.
+  </Card>
+  <Card title="Add Team Members" icon="users" href="/authentication">
+    Invite collaborators.
+  </Card>
+  <Card title="Embed Components" icon="puzzle" href="/introduction">
+    Advanced docs features.
+  </Card>
+</Columns>

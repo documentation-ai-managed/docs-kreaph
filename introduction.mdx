@@ -1,0 +1,118 @@
+---
+title: Introduction to Kreaph
+description: Discover Kreaph, your default documentation space for organizing and managing project documentation with ease.
+---
+
+## Overview
+
+Kreaph provides a centralized space to organize, manage, and publish your project documentation. You create structured docs, collaborate with your team, and customize the experience to match your brand. Benefit from intuitive navigation, version control, and seamless integration with your workflows, making documentation maintenance effortless.
+
+## Key Features
+
+Kreaph simplifies documentation with powerful tools tailored for teams and developers.
+
+<Columns cols={3}>
+  <Card title="Organized Spaces" icon="layers" href="#organization">
+    Group your docs into projects and sections for easy navigation and management.
+  </Card>
+  <Card title="Customizable Themes" icon="palette" href="#branding">
+    Apply your brand colors like `#3B82F6` and custom styles effortlessly.
+  </Card>
+  <Card title="Collaboration Tools" icon="users" href="#collaboration">
+    Share edits, review changes, and publish updates with real-time feedback.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get started with Kreaph in minutes using these steps.
+
+<Steps>
+  <Step title="Create a Project" icon="plus">
+    Log in to your dashboard at `https://dashboard.example.com` and click **New Project**.
+
+    Name it `my-docs` and select your preferred template.
+  </Step>
+  <Step title="Add Your First Doc" icon="file-text">
+    Navigate to the project and create a new MDX file.
+
+````mdx
+---
+title: My First Page
+description: Welcome to my docs.
+---
+
+## Hello World
+
+This is your first documentation page.
+````
+
+  </Step>
+  <Step title="Publish and Share" icon="globe">
+    Preview changes, then publish. Share the live URL with your team.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Explore the full quickstart guide for advanced setup options.
+</Callout>
+
+## Brand Guidelines
+
+Maintain consistency with Kreaph's brand elements. Use the primary color `#3B82F6` for accents, buttons, and links.
+
+<Tabs>
+  <Tab title="CSS Usage" icon="code">
+    Apply the brand color in your custom theme.
+
+````css
+:root {
+  --kreaph-brand: #3B82F6;
+}
+
+.button {
+  background-color: var(--kreaph-brand);
+  color: white;
+}
+````
+
+  </Tab>
+  <Tab title="Component Styling" icon="palette">
+    Override defaults in your project settings.
+
+````json
+{
+  "theme": {
+    "primary": "#3B82F6",
+    "headings": {
+      "color": "#1E293B"
+    }
+  }
+}
+````
+
+  </Tab>
+</Tabs>
+
+## Quick Navigation
+
+Access essential sections quickly.
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="zap" href="/quickstart">
+    Set up your first project and start documenting.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your docs with API keys and tokens.
+  </Card>
+  <Card title="Guides" icon="book-open" href="/guides">
+    In-depth tutorials and best practices.
+  </Card>
+  <Card title="Changelog" icon="git-branch" href="/changelog">
+    Stay updated with the latest releases.
+  </Card>
+</Columns>
+
+<Callout kind="info">
+  Ready to dive deeper? Begin with the [Quickstart](/quickstart) to build your documentation space today.
+</Callout>

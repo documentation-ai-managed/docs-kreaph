@@ -1,0 +1,132 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Kreaph.
+---
+
+## Recent Releases
+
+Kreaph releases follow semantic versioning. You receive automatic notifications for major updates through the dashboard. Review changes below to understand new capabilities and migration steps.
+
+<Callout kind="info">
+  Follow [@kreaph](https://github.com/kreaph/kreaph) on GitHub for instant release alerts and participate in discussions.
+</Callout>
+
+<Update label="2024-11-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration editing for documentation pages. Multiple users now edit simultaneously with live cursors and conflict resolution.
+- Introduced version history with diff viewer. Restore previous versions or compare changes visually.
+
+## Improvements
+
+- Enhanced search with fuzzy matching and full-text indexing, reducing query time by `>50%`.
+- Optimized image uploads supporting WebP and AVIF formats automatically.
+
+## Bug Fixes
+
+- Fixed markdown rendering issues with nested lists and tables.
+- Resolved authentication token refresh loops in long sessions.
+
+To upgrade:
+
+````bash
+npm install kreaph@latest
+````
+
+</Update>
+
+<Update label="2024-10-20" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Custom themes with CSS variables and brand color support (default: `#3B82F6`).
+- Integrated AI assistant for generating documentation outlines from prompts.
+
+## Improvements
+
+- Sidebar navigation now persists scroll position across page reloads.
+- Export to PDF with table of contents and page numbers.
+
+## Bug Fixes
+
+- Patched cross-site scripting vulnerability in user-generated content.
+- Corrected API rate limiting exceeding configured thresholds.
+
+<CodeGroup tabs="JavaScript,Python">
+````javascript
+// New theme configuration
+const kreaph = new Kreaph({
+  theme: {
+    primary: '#3B82F6'
+  }
+});
+````
+````python
+# Python SDK theme setup
+kreaph.config.theme.primary = "#3B82F6"
+````
+</CodeGroup>
+
+</Update>
+
+<Update label="2024-09-10" description="v1.1.0" tags={["improvement", "bugfix"]}>
+
+## Improvements
+
+- Dashboard performance boosted with virtual scrolling for large doc sets.
+- Mobile responsiveness for all components, including editor and previews.
+
+## Bug Fixes
+
+- Fixed drag-and-drop reordering in page trees.
+- Stabilized webhook deliveries during network interruptions.
+
+</Update>
+
+## Upcoming Changes
+
+<Columns cols={2}>
+  <Card title="v1.4.0 Preview" icon="zap" href="https://github.com/kreaph/kreaph/milestone/4">
+    Multi-language support and advanced analytics coming soon.
+  </Card>
+  <Card title="Migration Guide" icon="book-open" href="/configuration#upgrading">
+    Prepare for breaking changes in auth flows.
+  </Card>
+</Columns>
+
+## How to Stay Updated
+
+<Steps>
+  <Step title="Subscribe to Releases" icon="bell">
+    Visit the [GitHub repository](https://github.com/kreaph/kreaph/releases) and click "Watch" > "Releases only".
+  </Step>
+  <Step title="Enable Notifications" icon="settings">
+    In your Kreaph dashboard, toggle email alerts under Account > Notifications.
+  </Step>
+  <Step title="Check API Version" icon="code">
+    Query `https://api.example.com/v1/version` to verify your instance.
+  </Step>
+</Steps>
+
+<Expandable title="Migration Between Major Versions" default-open="false">
+
+When upgrading from v1.x to v2.0, update your `{API_KEY}` and reconfigure webhooks.
+
+```javascript
+// Old v1 auth
+fetch('https://api.example.com/docs', {
+  headers: { Authorization: `Bearer ${oldToken}` }
+});
+
+// New v2 auth
+fetch('https://api.example.com/v2/docs', {
+  headers: { 'X-API-Key': `your-api-key-here` }
+});
+```
+
+</Expandable>
+
+<Callout kind="tip">
+  Report issues or suggest features on [GitHub Discussions](https://github.com/kreaph/kreaph/discussions).
+</Callout>
